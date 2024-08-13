@@ -48,7 +48,7 @@ function Login(props) {
       <div className="login-wrapper">
         <div className="login-aside-left">
           <Link to="/dashboard" className="login-logo">
-            <img src={logo} className="logo" alt="" />
+            <img src={logo} style={{width: 200}} alt="" />
           </Link>
           <div className="login-description">
             <h2 className="main-title mb-2">Welcome To Starpay</h2>
