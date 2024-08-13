@@ -15,7 +15,7 @@ import "./assets/css/style.css";
 const SignUp = lazy(() => import('./jsx/pages/Registration'));
 const Login = lazy(() => {
     return new Promise(resolve => {
-        setTimeout(() => resolve(import('./jsx/pages/Login')), 500);
+        setTimeout(() => resolve(import('./jsx/pages/auth/Login')), 500);
     });
 });
 
