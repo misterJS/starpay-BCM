@@ -1,5 +1,11 @@
+import PaymentRequestTable from "./components/PaymentRequestContent";
+
 const PaymentRequest = () => {
-  return <>PR</>;
+  return (
+    <>
+      <PaymentRequestTable />
+    </> 
+  );
 };
 
-export default PaymentRequest
+export default PaymentRequest;
