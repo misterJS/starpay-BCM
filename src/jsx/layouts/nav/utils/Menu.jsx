@@ -10,7 +10,7 @@ export const MenuList = [
     title: "Monthly Budget",
     classsChange: "mm-collapse",
     iconStyle: <i className="flaticon-381-time"></i>,
-    to: 'dashboard',
+    to: 'monthly-budget',
   },
   {
     title: "Project",
