@@ -1,22 +1,19 @@
 .table-responsive {
     position: relative;
-  }
-  
-  .table .actions-column {
+}
+
+.table .actions-column {
     position: sticky;
     right: 0;
     z-index: 10;
-    background-color: white; /* Default, diubah di bawah */
+    background-color: white;
     box-shadow: -1px 0 0 #ddd;
-  }
-  
-  /* Warna background untuk baris genap */
-  .table tbody tr:nth-child(even) .actions-column {
-    background-color: #f9f9f9;
-  }
-  
-  /* Warna background untuk baris ganjil */
-  .table tbody tr:nth-child(odd) .actions-column {
+}
+
+.table tbody tr:nth-child(even) .actions-column {
     background-color: #fff;
-  }
-  
+}
+
+.table tbody tr:nth-child(odd) .actions-column {
+    background-color: #f2f2f2;
+}

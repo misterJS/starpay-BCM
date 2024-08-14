@@ -4,6 +4,7 @@ import Select from "react-select";
 import Collapse from "react-bootstrap/Collapse";
 import { options, tableData } from "../utils/mock";
 import "../utils/style/PaymentRequestContent.css";
+import { Dropdown } from "react-bootstrap";
 
 const PaymentRequestTable = () => {
   const [open, setOpen] = useState(true);
@@ -26,6 +27,67 @@ const PaymentRequestTable = () => {
       }
     }
   };
+
+  const chackboxFun = (type) => {
+    setTimeout(() => {
+      const chackbox = document.querySelectorAll(".customer_shop_single input");
+      const motherChackBox = document.querySelector(".customer_shop input");
+      for (let i = 0; i < chackbox.length; i++) {
+        const element = chackbox[i];
+        if (type === "all") {
+          if (motherChackBox.checked) {
+            element.checked = true;
+          } else {
+            element.checked = false;
+          }
+        } else {
+          if (!element.checked) {
+            motherChackBox.checked = false;
+            break;
+          } else {
+            motherChackBox.checked = true;
+          }
+        }
+      }
+    }, 100);
+  };
+
+  const chack = (i) => (
+    <div className={`form-check custom-checkbox ms-2`}>
+      <input
+        type="checkbox"
+        className="form-check-input "
+        id={`checkAll${i}`}
+        required=""
+        onClick={() => chackboxFun()}
+      />
+      <label className="form-check-label" htmlFor={`checkAll${i}`}></label>
+    </div>
+  );
+
+  const drop = (
+    <Dropdown>
+      <Dropdown.Toggle
+        variant=""
+        className="btn btn-primary tp-btn-light sharp i-false"
+      >
+        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+          <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+            <rect x="0" y="0" width="24" height="24"></rect>
+            <circle fill="#000000" cx="5" cy="12" r="2"></circle>
+            <circle fill="#000000" cx="12" cy="12" r="2"></circle>
+            <circle fill="#000000" cx="19" cy="12" r="2"></circle>
+          </g>
+        </svg>
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
+        <Dropdown.Item href="#">Edit</Dropdown.Item>
+        <Dropdown.Item href="#" className="text-danger">
+          Delete
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
   // use effect
   useEffect(() => {
     setData(document.querySelectorAll("#content_wrapper tbody tr"));
@@ -147,9 +209,23 @@ const PaymentRequestTable = () => {
                       id="content_wrapper"
                       className="dataTables_wrapper no-footer"
                     >
-                      <table className="table table-bordered table-responsive-lg table-striped table-condensed flip-content">
+                      <table className="table mb-0 table-striped">
                         <thead>
                           <tr>
+                            <th className="customer_shop">
+                              <div className="form-check custom-checkbox mx-2">
+                                <input
+                                  type="checkbox"
+                                  className="form-check-input"
+                                  id="checkAll"
+                                  onClick={() => chackboxFun("all")}
+                                />
+                                <label
+                                  className="form-check-label"
+                                  htmlFor="checkAll"
+                                ></label>
+                              </div>
+                            </th>
                             <th>No.</th>
                             <th>NYA</th>
                             <th>Period</th>
@@ -170,9 +246,12 @@ const PaymentRequestTable = () => {
                             <th className="text-end actions-column">Actions</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="customers">
                           {deleteItem.map((item, ind) => (
                             <tr key={ind}>
+                              <td className="customer_shop_single">
+                                {chack(item.id)}
+                              </td>
                               <td>{item.id}</td>
                               <td>No</td>
                               <td>{item.period}</td>
@@ -190,25 +269,20 @@ const PaymentRequestTable = () => {
                               <td>{item.title}</td>
                               <td>{item.status}</td>
                               <td>18 Feb, 2023</td>
-                              <td className="text-end actions-column">
-                                <Link
-                                  to={"/add-content"}
-                                  className="btn btn-warning btn-sm content-icon me-1"
-                                >
-                                  <i className="fa fa-edit"></i>
-                                </Link>
-                                <Link
-                                  to={"#"}
-                                  className="btn btn-danger btn-sm content-icon ms-1"
-                                  onClick={() => handleDelete(ind)}
-                                >
-                                  <i className="fa fa-times"></i>
-                                </Link>
+                              <td className="py-2 text-right actions-column">
+                                {drop}
                               </td>
                             </tr>
                           ))}
                         </tbody>
                       </table>
+                    </div>
+                  </div>
+                  <div className="table-responsive">
+                    <div
+                      id="content_wrapper"
+                      className="dataTables_wrapper no-footer"
+                    >
                       <div className="d-sm-flex text-center justify-content-between align-items-center mt-3">
                         <div className="dataTables_info">
                           Showing {activePag.current * sort + 1} to{" "}
