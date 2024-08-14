@@ -4,7 +4,7 @@ const Setting = () => {
 	
 	return (
 		<>
-			<h6>hello</h6>
+			<h6></h6>
 		</>
 	);
 };
