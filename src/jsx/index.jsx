@@ -13,6 +13,7 @@ import Nav from "./layouts/nav";
 import Footer from "./layouts/Footer";
 /// Dashboard
 import Home from "./components/Dashboard/Home";
+import PaymentRequest from "./pages/PaymentRequest";
 import DashboardDark from "./components/Dashboard/DashboardDark";
 import MyWallet from "./components/Dashboard/MyWallet";
 import Invoices from "./components/Dashboard/Invoices";
@@ -121,7 +122,8 @@ import { ThemeContext } from "../context/ThemeContext";
 const Markup = () => {
   const allroutes = [
     /// Dashboard
-    { url: "", component: <Home /> },
+    { url: "", component: <PaymentRequest /> },
+    // { url: "", component: <Home /> },
     { url: "dashboard", component: <Home /> },
     { url: "dashboard-dark", component: <DashboardDark /> },
     { url: "my-wallet", component: <MyWallet /> },

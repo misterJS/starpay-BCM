@@ -57,9 +57,9 @@ const Header = ({ onNote }) => {
                 style={{ textTransform: "capitalize" }}
               >
                 {finalName.join(" ").length === 0
-                  ? "Dashboard"
+                  ? "Payment Request"
                   : finalName.join(" ") === "dashboard dark"
-                    ? "Dashboard"
+                    ? "Payment Request"
                     : finalName.join(" ")}
               </div>
             </div>
