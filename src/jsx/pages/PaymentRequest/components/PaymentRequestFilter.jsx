@@ -5,7 +5,7 @@ import { Collapse, FormLabel } from "react-bootstrap";
 import { useState } from "react";
 
 const PaymentRequestFilter = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <div className="filter cm-content-box box-primary">
       <div className="content-title">
