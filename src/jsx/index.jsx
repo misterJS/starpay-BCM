@@ -14,6 +14,7 @@ import Footer from "./layouts/Footer";
 /// Dashboard
 import Home from "./components/Dashboard/Home";
 import PaymentRequest from "./pages/PaymentRequest";
+import MonthlyBudget from "./pages/MonthlyBudget";
 import DashboardDark from "./components/Dashboard/DashboardDark";
 import MyWallet from "./components/Dashboard/MyWallet";
 import Invoices from "./components/Dashboard/Invoices";
@@ -122,6 +123,7 @@ import { ThemeContext } from "../context/ThemeContext";
 const Markup = () => {
   const allroutes = [
     /// Dashboard
+    { url: "monthly-budget", component: <MonthlyBudget /> },
     { url: "", component: <PaymentRequest /> },
     // { url: "", component: <Home /> },
     { url: "dashboard", component: <Home /> },
