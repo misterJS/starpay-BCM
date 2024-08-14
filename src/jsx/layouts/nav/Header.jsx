@@ -70,14 +70,14 @@ const Header = ({ onNote }) => {
                   <span className="input-group-text"><Link to={"#"}><i className="flaticon-381-search-2"></i></Link></span>
                 </div>
               </li>
-              <li className="nav-item dropdown notification_dropdown">
+              {/* <li className="nav-item dropdown notification_dropdown">
                 <Link to={"#"} className={`nav-link bell dz-theme-mode p-0 ${background.value === "dark" ? 'active' : ''}`}
                   onClick={ChangeColor}
                 >
                   <i id="icon-light" className="fas fa-sun" />
                   <i id="icon-dark" className="fas fa-moon" />
                 </Link>
-              </li>
+              </li> */}
               {/* <Dropdown
                 as="li"
                 className="nav-item dropdown notification_dropdown "
