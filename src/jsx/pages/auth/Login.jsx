@@ -47,7 +47,7 @@ function Login(props) {
     >
       <div className="login-wrapper">
         <div className="login-aside-left">
-          <Link to="/dashboard" className="login-logo">
+          <Link to="/" className="login-logo">
             <img src={logo} style={{width: 200}} alt="" />
           </Link>
           <div className="login-description">
