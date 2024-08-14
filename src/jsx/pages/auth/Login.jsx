@@ -70,11 +70,11 @@ function Login(props) {
         <div className="login-aside-right">
           <div className="row m-0 justify-content-center h-100 align-items-center">
             <div className="p-5">
-              <Link to="/dashboard" className="login-logo pb-5">
-                <img src={logo} style={{width: "100%"}} alt="" />
-              </Link>
               <div className="authincation-content">
                 <div className="row no-gutters">
+                  <Link to="/dashboard" className="pb-5">
+                    <img src={logo} style={{width: "100%"}} alt="" />
+                  </Link>
                   <div className="col-xl-12">
                     <div className="auth-form-1">
                       <div className="mb-4">
