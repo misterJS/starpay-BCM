@@ -271,7 +271,7 @@ function MainLayout() {
       <Setting />
     </>
   )
-};
+}
 
 
 export default Markup;

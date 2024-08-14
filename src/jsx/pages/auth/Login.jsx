@@ -47,9 +47,6 @@ function Login(props) {
     >
       <div className="login-wrapper">
         <div className="login-aside-left">
-          <Link to="/" className="login-logo">
-            <img src={logo} style={{width: 200}} alt="" />
-          </Link>
           <div className="login-description">
             <h2 className="main-title mb-2">Welcome To Starpay</h2>
             {/* <ul className="social-icons mt-4">
@@ -73,6 +70,9 @@ function Login(props) {
         <div className="login-aside-right">
           <div className="row m-0 justify-content-center h-100 align-items-center">
             <div className="p-5">
+              <Link to="/dashboard" className="login-logo pb-5">
+                <img src={logo} style={{width: "100%"}} alt="" />
+              </Link>
               <div className="authincation-content">
                 <div className="row no-gutters">
                   <div className="col-xl-12">

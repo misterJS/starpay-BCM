@@ -78,7 +78,7 @@ const Header = ({ onNote }) => {
                   <i id="icon-dark" className="fas fa-moon" />
                 </Link>
               </li>
-              <Dropdown
+              {/* <Dropdown
                 as="li"
                 className="nav-item dropdown notification_dropdown "
               >
@@ -331,7 +331,7 @@ const Header = ({ onNote }) => {
               </Dropdown>
               <li className="nav-item">
                 <Link to={"#"} className="btn btn-primary d-sm-inline-block d-none">Generate Report<i className="las la-signal ms-3 scale5"></i></Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </nav>
