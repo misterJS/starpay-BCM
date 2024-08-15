@@ -1,0 +1,13 @@
+.date-filter_custom {
+  padding: 10px !important;
+}
+
+.date-filter_custom div {
+  border: none;
+  outline: none;
+}
+
+.date-filter_custom .rs-input-group:focus-within, .rs-input-group:not(.rs-input-group-disabled).rs-input-group-focus {
+  border: none;
+  outline: none;
+}

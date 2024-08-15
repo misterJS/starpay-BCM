@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Select from "react-select";
 import Collapse from "react-bootstrap/Collapse";
-import { options, tableData } from "../utils/mock";
-import "../../../../assets/css/content-table.css";
+import { tableData } from "../utils/mock";
 import { Dropdown } from "react-bootstrap";
+import MonthlyBudgetFilter from "./MonthlyBudgetFilter";
+
+import "../../../../assets/css/content-table.css";
 
 const MonthlyBudgetTable = () => {
-  const [open, setOpen] = useState(true);
   const [open2, setOpen2] = useState(true);
 
   const [data, setData] = useState(
@@ -109,78 +109,11 @@ const MonthlyBudgetTable = () => {
   };
 
   const [deleteItem, setDeleteItem] = useState(tableData);
-  const handleDelete = (ind) => {
-    setDeleteItem((oldValues) => {
-      return oldValues.filter((_, i) => i !== ind);
-    });
-  };
   return (
     <>
       <div className="row">
         <div className="col-xl-12">
-          <div className="filter cm-content-box box-primary">
-            <div className="content-title">
-              <div className="cpa">
-                <i className="fas fa-filter me-2"></i>Filter
-              </div>
-              <div className="tools">
-                <Link
-                  to={"#"}
-                  className={`SlideToolHeader ${open ? "collapse" : "expand"}`}
-                  onClick={() => setOpen(!open)}
-                >
-                  <i className="fas fa-angle-up"></i>
-                </Link>
-              </div>
-            </div>
-
-            <Collapse in={open}>
-              <div className="cm-content-body form excerpt">
-                <div className="card-body">
-                  <div className="row filter-row">
-                    <div className="col-xl-3 col-xxl-6">
-                      <input
-                        type="text"
-                        className="form-control mb-xl-0 mb-3"
-                        id="exampleFormControlInput1"
-                        placeholder="Title"
-                      />
-                    </div>
-                    <div className="col-xl-3 col-xxl-6">
-                      <Select
-                        isSearchable={false}
-                        options={options}
-                        className="custom-react-select mb-3 mb-xxl-0 "
-                      />
-                    </div>
-                    <div className="col-xl-3 col-xxl-6">
-                      <input
-                        type="date"
-                        name="datepicker"
-                        className=" form-control mb-xxl-0 mb-3"
-                      />
-                    </div>
-                    <div className="col-xl-3 col-xxl-6">
-                      <button
-                        className="btn btn-primary me-2"
-                        title="Click here to Search"
-                        type="button"
-                      >
-                        <i className="fa fa-search me-1"></i>Filter
-                      </button>
-                      <button
-                        className="btn btn-danger light"
-                        title="Click here to remove filter"
-                        type="button"
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Collapse>
-          </div>
+          <MonthlyBudgetFilter />
           <div className="mb-3">
             <Link to={"/add-content"} className="btn btn-primary">
               Add New Budget Request
@@ -189,7 +122,7 @@ const MonthlyBudgetTable = () => {
           <div className="filter cm-content-box box-primary mt-5">
             <div className={`content-title`}>
               <div className="cpa">
-                <i className="fas fa-file-word me-2"></i>PR List
+                <i className="fas fa-file-word me-2"></i>Monthly Budget List
               </div>
               <div className="tools">
                 <Link

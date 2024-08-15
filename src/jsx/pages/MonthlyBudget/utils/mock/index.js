@@ -1,11 +1,38 @@
-export const options = [
-  //{ value: '1', label: 'Select Status' },
-  { value: "2", label: "Published" },
-  { value: "3", label: "Draft" },
-  { value: "4", label: "Trash" },
-  { value: "5", label: "Private" },
-  { value: "6", label: "Pending" },
+export const optionsNeedYourAppr = [
+  { value: '1', label: 'All' },
+  { value: '2', label: 'Yes' },
+  { value: '3', label: 'No' },
+]
+
+export const optionsMonth = [
+  { value: '1', label: 'January' },
+  { value: "2", label: "February" },
+  { value: "3", label: "Maret" },
+  { value: "4", label: "April" },
+  { value: "5", label: "May" },
+  { value: "6", label: "June" },
+  { value: "6", label: "July" },
+  { value: "6", label: "August" },
+  { value: "6", label: "September" },
+  { value: "6", label: "October" },
+  { value: "6", label: "November" },
+  { value: "6", label: "Desember" },
 ];
+
+export const optionsYear = [
+    { value: '1', label: '2021' },
+    { value: "2", label: "2022" },
+    { value: "3", label: "2023" },
+    { value: "4", label: "2024" },
+    { value: "5", label: "2025" },
+    { value: "6", label: "2026" },
+    { value: "6", label: "2027" },
+    { value: "6", label: "2028" },
+    { value: "6", label: "2029" },
+    { value: "6", label: "2030" },
+    { value: "6", label: "2031" },
+    { value: "6", label: "2032" },
+  ];
 
 export const tableData = [
   {
