@@ -2,9 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Collapse from "react-bootstrap/Collapse";
 import { tableData } from "../utils/mock";
-import "../utils/style/PaymentRequestContent.css";
 import { Dropdown } from "react-bootstrap";
 import PaymentRequestFilter from "./PaymentRequestFilter";
+
+import "../../../../assets/css/content-table.css";
 
 const PaymentRequestTable = () => {
   const [open2, setOpen2] = useState(true);

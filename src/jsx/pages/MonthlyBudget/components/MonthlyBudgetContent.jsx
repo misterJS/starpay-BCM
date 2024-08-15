@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Select from "react-select";
 import Collapse from "react-bootstrap/Collapse";
 import { options, tableData } from "../utils/mock";
-import "../utils/style/MonthlyBudgetContent.css";
+import "../../../../assets/css/content-table.css";
 import { Dropdown } from "react-bootstrap";
 
 const MonthlyBudgetTable = () => {
